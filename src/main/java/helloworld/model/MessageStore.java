@@ -1,4 +1,4 @@
-package org.apache.struts.helloworld.model;
+package helloworld.model;
 
 /**
  * Model class that stores a message.

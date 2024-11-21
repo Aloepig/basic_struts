@@ -1,6 +1,6 @@
-package org.apache.struts.helloworld.action;
+package helloworld.action;
 
-import org.apache.struts.helloworld.model.MessageStore;
+import helloworld.model.MessageStore;
 
 import com.opensymphony.xwork2.ActionSupport;
 

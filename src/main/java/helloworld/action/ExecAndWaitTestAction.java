@@ -1,4 +1,4 @@
-package org.apache.struts.helloworld.action;
+package helloworld.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
