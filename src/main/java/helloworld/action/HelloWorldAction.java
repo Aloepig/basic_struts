@@ -30,7 +30,7 @@ public class HelloWorldAction extends ActionSupport {
      * @see com.opensymphony.xwork2.ActionSupport#execute()
      */
     public String execute() {
-        messageStore = new MessageStore() ;
+        messageStore = new MessageStore("첫번째 액션") ;
         
         return SUCCESS;
     }

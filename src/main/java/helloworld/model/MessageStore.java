@@ -9,8 +9,13 @@ public class MessageStore {
     
     private String message;
     
-    public MessageStore() {
-        message = "Hello Struts User";
+    public MessageStore(String initMessage) {
+
+        if(initMessage.isEmpty()){
+            message = "Hello Struts User";
+        } else {
+            message = initMessage;
+        }
     }
 
     public String getMessage() {

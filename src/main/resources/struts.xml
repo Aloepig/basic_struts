@@ -8,7 +8,7 @@
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.action.extension" value=","/>
 
-    <package name="basicstruts2" namespace="/" extends="struts-default">
+    <package name="basicstruts" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
 
         <!-- If no class attribute is specified the framework will assume success and
@@ -34,6 +34,19 @@
             <interceptor-ref name="execAndWait"/>
             <result name="wait">/execAndWaitTest_wait.jsp</result>
             <result type="redirectAction">ExecAndWaitTest</result>
+        </action>
+
+        <action name="echo" class="formtest.action.EchoAction" method="execute">
+            <result name="success">/echo.jsp</result>
+            <result name="filed">/index.jsp</result>
+        </action>
+
+        <action name="link">
+            <result>/ch3/link.jsp</result>
+        </action>
+
+        <action name="gotoLink" class="formtest.action.GotoLinkAction" method="execute">
+            <result name="success">/ch3/gotoLink.jsp</result>
         </action>
 
     </package>
