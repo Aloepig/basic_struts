@@ -10,24 +10,21 @@
 <html>
 <body>
 <s:form action="checkCourse" method="post" theme="simple">
-    <s:checkbox name="courseDto.courseStruts2" value="%{courseDto.courseStruts2}"/> Struts2
-    <s:checkbox name="courseDto.courseSpringBoot" value="%{courseDto.courseSpringBoot}"/> courseSpringBoot
-    <s:checkbox name="courseDto.courseNodejs" value="%{courseDto.courseNodejs}"/> courseNodejs
+    <s:checkbox name="courseDto.courseStateStruts" value="%{courseDto.courseStateStruts.courseCheck}"/> Struts2
+    <s:checkbox name="courseDto.courseStateSpringBoot" value="%{courseDto.courseStateSpringBoot.courseCheck}"/> courseSpringBoot
+    <s:checkbox name="courseDto.courseStateNodejs" value="%{courseDto.courseStateNodejs.courseCheck}"/> courseNodejs
     <s:submit/>
 
     <p>
         <s:property value="courseDto.courseStateStruts.courseName"/>
-        <s:property value="courseDto.courseStruts2"/>
         <s:property value="courseDto.courseStateStruts.courseDesc"/>
     </p>
     <p>
         <s:property value="courseDto.courseStateSpringBoot.courseName"/>
-        <s:property value="courseDto.courseSpringBoot"/>
         <s:property value="courseDto.courseStateSpringBoot.courseDesc"/>
     </p>
     <p>
         <s:property value="courseDto.courseStateNodejs.courseName"/>
-        <s:property value="courseDto.courseNodejs"/>
         <s:property value="courseDto.courseStateNodejs.courseDesc"/>
     </p>
 </s:form>
