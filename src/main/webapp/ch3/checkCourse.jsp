@@ -17,14 +17,17 @@
 
     <p>
         <s:property value="courseDto.courseStateStruts.courseName"/>
+        <s:property value="courseDto.courseStateStruts.courseCheck"/>
         <s:property value="courseDto.courseStateStruts.courseDesc"/>
     </p>
     <p>
         <s:property value="courseDto.courseStateSpringBoot.courseName"/>
+        <s:property value="courseDto.courseStateSpringBoot.courseCheck"/>
         <s:property value="courseDto.courseStateSpringBoot.courseDesc"/>
     </p>
     <p>
         <s:property value="courseDto.courseStateNodejs.courseName"/>
+        <s:property value="courseDto.courseStateNodejs.courseCheck"/>
         <s:property value="courseDto.courseStateNodejs.courseDesc"/>
     </p>
 </s:form>
