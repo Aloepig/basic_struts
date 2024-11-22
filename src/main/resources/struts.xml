@@ -61,10 +61,13 @@
             <result name="success">/ch3/movieRank.jsp</result>
         </action>
 
-        <action name="appendList" class="formtest.action.AppendAction" method="execute">
+        <action name="appendList" class="formtest.action.AppendAction">
             <result name="success">/ch3/append.jsp</result>
         </action>
 
+        <action name="methodTest" class="ch4.action.MethodAction" method="execute">
+            <result name="success">/ch4/methodPrefix.jsp</result>
+        </action>
 
     </package>
 
