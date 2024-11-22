@@ -1,4 +1,4 @@
-package formtest.action;
+package ch3.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 

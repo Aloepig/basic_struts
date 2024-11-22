@@ -36,7 +36,7 @@
             <result type="redirectAction">ExecAndWaitTest</result>
         </action>
 
-        <action name="echo" class="formtest.action.EchoAction" method="execute">
+        <action name="echo" class="ch3.action.EchoAction" method="execute">
             <result name="success">/ch3/echo.jsp</result>
             <result name="filed">/index.jsp</result>
         </action>
@@ -45,23 +45,23 @@
             <result>/ch3/link.jsp</result>
         </action>
 
-        <action name="gotoLink" class="formtest.action.GotoLinkAction" method="execute">
+        <action name="gotoLink" class="ch3.action.GotoLinkAction" method="execute">
             <result name="success">/ch3/gotoLink.jsp</result>
         </action>
 
-        <action name="checkCourse" class="formtest.action.CheckCourse" method="execute">
+        <action name="checkCourse" class="ch3.action.CheckCourse" method="execute">
             <result name="success">/ch3/checkCourse.jsp</result>
         </action>
 
-        <action name="selectCourse" class="formtest.action.SelectCourseAction" method="execute">
+        <action name="selectCourse" class="ch3.action.SelectCourseAction" method="execute">
             <result name="success">/ch3/selectCourse.jsp</result>
         </action>
 
-        <action name="movieRank" class="formtest.action.MovieRankAction" method="execute">
+        <action name="movieRank" class="ch3.action.MovieRankAction" method="execute">
             <result name="success">/ch3/movieRank.jsp</result>
         </action>
 
-        <action name="appendList" class="formtest.action.AppendAction">
+        <action name="appendList" class="ch3.action.AppendAction">
             <result name="success">/ch3/append.jsp</result>
         </action>
 

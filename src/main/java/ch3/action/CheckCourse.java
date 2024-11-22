@@ -1,7 +1,7 @@
-package formtest.action;
+package ch3.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import formtest.model.CourseDto;
+import ch3.model.CourseDto;
 
 public class CheckCourse extends ActionSupport {
 

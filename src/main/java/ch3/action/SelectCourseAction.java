@@ -1,7 +1,7 @@
-package formtest.action;
+package ch3.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import formtest.model.CourseState;
+import ch3.model.CourseState;
 
 import java.util.ArrayList;
 import java.util.HashMap;

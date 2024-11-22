@@ -1,4 +1,4 @@
-package formtest.action;
+package ch3.action;
 
 import org.apache.commons.lang3.StringUtils;
 

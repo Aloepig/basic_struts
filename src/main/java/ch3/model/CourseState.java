@@ -1,4 +1,4 @@
-package formtest.model;
+package ch3.model;
 
 public class CourseState {
     final private boolean courseCheck;

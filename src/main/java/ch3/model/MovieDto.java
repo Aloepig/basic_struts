@@ -1,4 +1,4 @@
-package formtest.model;
+package ch3.model;
 
 public class MovieDto {
 
