@@ -79,6 +79,16 @@
             <result name="success">/ch4/viewProduct.jsp</result>
         </action>
 
+        <action name="callMultiAction" class="ch4.action.CallMultiAction" method="execute">
+            <result name="success">/ch4/callMultiAction.jsp</result>
+        </action>
+        <action name="action1" class="ch4.action.CallMultiAction" method="action1">
+            <result name="success">/ch4/actionStep1.jsp</result>
+        </action>
+        <action name="action2" class="ch4.action.CallMultiAction" method="action2">
+            <result name="success">/ch4/actionStep2.jsp</result>
+        </action>
+
     </package>
 
 </struts>
