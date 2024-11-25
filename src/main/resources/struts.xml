@@ -69,6 +69,16 @@
             <result name="success">/ch4/methodPrefix.jsp</result>
         </action>
 
+        <action name="addProductForm" class="ch4.action.ProductAction" method="addProductForm">
+            <result name="success">/ch4/addProduct.jsp</result>
+        </action>
+        <action name="addProduct" class="ch4.action.ProductAction" method="addProduct">
+            <result name="success" type="chain">viewProduct</result>
+        </action>
+        <action name="viewProduct" class="ch4.action.ProductAction" method="viewProduct">
+            <result name="success">/ch4/viewProduct.jsp</result>
+        </action>
+
     </package>
 
 </struts>
