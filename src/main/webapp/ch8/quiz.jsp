@@ -9,9 +9,14 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>CH6 Menu Page</title>
+    <title>Quiz Page</title>
 </head>
 <body>
-
+<s:form>
+    <s:textfield label="name" name="name"/>
+    <s:textfield label="age" name="age"/>
+    <s:textfield label="answer" name="answer"/>
+    <s:submit/>
+</s:form>
 </body>
 </html>

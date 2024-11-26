@@ -5,10 +5,10 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <package name="ch6control" namespace="/" extends="struts-default">
+    <package name="ch8control" namespace="/" extends="struts-default">
 
-        <action name="menu" class="ch6.action.SystemAction" method="execute">
-            <result name="success">/ch6/menu.jsp</result>
+        <action name="quiz" class="ch8.action.QuizAction" method="execute">
+            <result name="success">/ch8/quiz.jsp</result>
         </action>
 
     </package>

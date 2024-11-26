@@ -11,7 +11,7 @@
     <include file="controller/helloworld.xml" />
     <include file="controller/ch3.xml" />
     <include file="controller/ch4.xml" />
-    <include file="controller/ch6.xml" />
+    <include file="controller/ch8.xml" />
 
     <package name="basicstruts" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
