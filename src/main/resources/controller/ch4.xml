@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="ch4control" namespace="/" extends="struts-default">
+
+        <action name="methodTest" class="ch4.action.MethodAction" method="execute">
+            <result name="success">/ch4/methodPrefix.jsp</result>
+        </action>
+
+        <action name="addProductForm" class="ch4.action.ProductAction" method="addProductForm">
+            <result name="success">/ch4/addProduct.jsp</result>
+        </action>
+        <action name="addProduct" class="ch4.action.ProductAction" method="addProduct">
+            <result name="success" type="chain">viewProduct</result>
+        </action>
+        <action name="viewProduct" class="ch4.action.ProductAction" method="viewProduct">
+            <result name="success">/ch4/viewProduct.jsp</result>
+        </action>
+
+        <action name="callMultiAction" class="ch4.action.CallMultiAction" method="execute">
+            <result name="success">/ch4/callMultiAction.jsp</result>
+        </action>
+        <action name="action1" class="ch4.action.CallMultiAction" method="action1">
+            <result name="success">/ch4/actionStep1.jsp</result>
+        </action>
+        <action name="action2" class="ch4.action.CallMultiAction" method="action2">
+            <result name="success">/ch4/actionStep2.jsp</result>
+        </action>
+
+    </package>
+</struts>

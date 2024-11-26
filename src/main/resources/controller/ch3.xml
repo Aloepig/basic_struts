@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="ch3control" namespace="/" extends="struts-default">
+
+        <action name="echo" class="ch3.action.EchoAction" method="execute">
+            <result name="success">/ch3/echo.jsp</result>
+            <result name="filed">/index.jsp</result>
+        </action>
+
+        <action name="link">
+            <result>/ch3/link.jsp</result>
+        </action>
+
+        <action name="gotoLink" class="ch3.action.GotoLinkAction" method="execute">
+            <result name="success">/ch3/gotoLink.jsp</result>
+        </action>
+
+        <action name="checkCourse" class="ch3.action.CheckCourse" method="execute">
+            <result name="success">/ch3/checkCourse.jsp</result>
+        </action>
+
+        <action name="selectCourse" class="ch3.action.SelectCourseAction" method="execute">
+            <result name="success">/ch3/selectCourse.jsp</result>
+        </action>
+
+        <action name="movieRank" class="ch3.action.MovieRankAction" method="execute">
+            <result name="success">/ch3/movieRank.jsp</result>
+        </action>
+
+        <action name="appendList" class="ch3.action.AppendAction">
+            <result name="success">/ch3/append.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>

@@ -8,6 +8,11 @@
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.action.extension" value=","/>
 
+    <include file="controller/helloworld.xml" />
+    <include file="controller/ch3.xml" />
+    <include file="controller/ch4.xml" />
+    <include file="controller/ch6.xml" />
+
     <package name="basicstruts" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
 
@@ -16,77 +21,6 @@
         <!-- If no name value for the result node is specified the success value is the default -->
         <action name="index">
             <result>/index.jsp</result>
-        </action>
-
-        <!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
-        If the result returned by the execute method is success render the HelloWorld.jsp -->
-        <action name="hello" class="helloworld.action.HelloWorldAction" method="execute">
-            <result name="success">/helloworld/HelloWorld.jsp</result>
-        </action>
-
-        <!-- Executed And Wait Test -->
-        <action name="ExecAndWaitTest" class="helloworld.action.ExecAndWaitTestAction">
-            <interceptor-ref name="basicStack"/>
-            <result>/helloworld/execAndWaitTest.jsp</result>
-        </action>
-        <action name="ExecAndWaitTest_test" class="helloworld.action.ExecAndWaitTestAction" method="test">
-            <interceptor-ref name="basicStack"/>
-            <interceptor-ref name="execAndWait"/>
-            <result name="wait">/helloworld/execAndWaitTest_wait.jsp</result>
-            <result type="redirectAction">ExecAndWaitTest</result>
-        </action>
-
-        <action name="echo" class="ch3.action.EchoAction" method="execute">
-            <result name="success">/ch3/echo.jsp</result>
-            <result name="filed">/index.jsp</result>
-        </action>
-
-        <action name="link">
-            <result>/ch3/link.jsp</result>
-        </action>
-
-        <action name="gotoLink" class="ch3.action.GotoLinkAction" method="execute">
-            <result name="success">/ch3/gotoLink.jsp</result>
-        </action>
-
-        <action name="checkCourse" class="ch3.action.CheckCourse" method="execute">
-            <result name="success">/ch3/checkCourse.jsp</result>
-        </action>
-
-        <action name="selectCourse" class="ch3.action.SelectCourseAction" method="execute">
-            <result name="success">/ch3/selectCourse.jsp</result>
-        </action>
-
-        <action name="movieRank" class="ch3.action.MovieRankAction" method="execute">
-            <result name="success">/ch3/movieRank.jsp</result>
-        </action>
-
-        <action name="appendList" class="ch3.action.AppendAction">
-            <result name="success">/ch3/append.jsp</result>
-        </action>
-
-        <action name="methodTest" class="ch4.action.MethodAction" method="execute">
-            <result name="success">/ch4/methodPrefix.jsp</result>
-        </action>
-
-        <action name="addProductForm" class="ch4.action.ProductAction" method="addProductForm">
-            <result name="success">/ch4/addProduct.jsp</result>
-        </action>
-        <action name="addProduct" class="ch4.action.ProductAction" method="addProduct">
-            <result name="success" type="chain">viewProduct</result>
-        </action>
-        <action name="viewProduct" class="ch4.action.ProductAction" method="viewProduct">
-            <result name="success">/ch4/viewProduct.jsp</result>
-        </action>
-
-        <action name="callMultiAction" class="ch4.action.CallMultiAction" method="execute">
-            <result name="success">/ch4/callMultiAction.jsp</result>
-        </action>
-        <action name="action1" class="ch4.action.CallMultiAction" method="action1">
-            <result name="success">/ch4/actionStep1.jsp</result>
-        </action>
-        <action name="action2" class="ch4.action.CallMultiAction" method="action2">
-            <result name="success">/ch4/actionStep2.jsp</result>
         </action>
 
     </package>
