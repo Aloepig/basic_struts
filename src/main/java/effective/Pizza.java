@@ -9,10 +9,10 @@ public abstract class Pizza {
     final Set<Topping> toppings;
 
     abstract static class Builder<T extends Builder<T>> {
-        Set<Topping> toppings = EnumSet.noneOf(Topping.class);
+        Set<Topping> builderTopping = EnumSet.noneOf(Topping.class);
 
         public T addToppings(Topping topping) {
-            toppings.add(topping);
+            builderTopping.add(topping);
             return self();
         }
 
@@ -22,6 +22,6 @@ public abstract class Pizza {
     }
 
     Pizza(Builder<?> builder) {
-        toppings = builder.toppings;
+        toppings = builder.builderTopping;
     }
 }

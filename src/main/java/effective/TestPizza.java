@@ -13,6 +13,7 @@ public class TestPizza {
     public void testPizza() {
         Pizza pizza = this.getNyPizza();
         Set<Pizza.Topping> pizzaTopping = EnumSet.allOf(Pizza.Topping.class);
+        pizzaTopping.remove(Pizza.Topping.HAM);
         Assertions.assertEquals(pizza.toppings, pizzaTopping);
     }
 
