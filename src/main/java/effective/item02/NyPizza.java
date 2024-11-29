@@ -1,4 +1,4 @@
-package effective;
+package effective.item02;
 
 public class NyPizza extends Pizza {
 
@@ -17,7 +17,6 @@ public class NyPizza extends Pizza {
         protected Builder self() {
             return this;
         }
-
 
     }
 }
