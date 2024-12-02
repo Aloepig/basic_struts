@@ -1,4 +1,4 @@
-package effective.item02;
+package effective.part1.item02;
 
 import java.util.EnumSet;
 import java.util.Set;

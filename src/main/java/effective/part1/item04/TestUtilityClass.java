@@ -1,6 +1,5 @@
-package effective.item04;
+package effective.part1.item04;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestUtilityClass {

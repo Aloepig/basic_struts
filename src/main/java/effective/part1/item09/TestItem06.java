@@ -1,4 +1,4 @@
-package effective.item06;
+package effective.part1.item09;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,6 +8,7 @@ import java.util.Date;
 public class TestItem06 {
 
     @Test
+    // 6초 소요
     public void item06TestSlow(){
         Date startDate = new Date();
         Long sum = 0L;
@@ -20,6 +21,7 @@ public class TestItem06 {
     }
 
     @Test
+    // 0.6초 소요
     public void item06TestFast(){
         Date startDate = new Date();
         long sum = 0L;

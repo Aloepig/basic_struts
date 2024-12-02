@@ -1,4 +1,4 @@
-package effective.item03;
+package effective.part1.item03;
 
 public class ElvisNormal {
     private static final ElvisNormal INSTANCE = new ElvisNormal();

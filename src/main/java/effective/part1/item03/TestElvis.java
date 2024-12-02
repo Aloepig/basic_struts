@@ -1,4 +1,4 @@
-package effective.item03;
+package effective.part1.item03;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Assertions;
