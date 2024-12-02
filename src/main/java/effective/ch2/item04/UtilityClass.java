@@ -1,4 +1,4 @@
-package effective.part1.item04;
+package effective.ch2.item04;
 
 public class UtilityClass {
 

@@ -1,4 +1,4 @@
-package effective.part1.item05;
+package effective.ch2.item05;
 
 import java.util.Objects;
 

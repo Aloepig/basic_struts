@@ -1,4 +1,4 @@
-package effective.part1.item02;
+package effective.ch2.item02;
 
 public class NyPizza extends Pizza {
 

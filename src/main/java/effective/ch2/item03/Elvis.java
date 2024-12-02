@@ -1,4 +1,4 @@
-package effective.part1.item03;
+package effective.ch2.item03;
 
 public enum Elvis {
     INSTANCE;

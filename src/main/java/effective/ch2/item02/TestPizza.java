@@ -1,4 +1,4 @@
-package effective.part1.item02;
+package effective.ch2.item02;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
