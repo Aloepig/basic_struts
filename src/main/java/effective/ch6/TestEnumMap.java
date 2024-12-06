@@ -1,5 +1,6 @@
 package effective.ch6;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.EnumMap;
@@ -29,7 +30,7 @@ public class TestEnumMap {
     @Test
     public void enumMapTest2() {
         Phase.Transition transition = Phase.Transition.get(Phase.GAS, Phase.LIQUID);
-        System.out.println(transition);
+        Assertions.assertEquals(Phase.Transition.CONDENSE, transition);
     }
 
     enum Phase {
