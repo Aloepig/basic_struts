@@ -31,6 +31,7 @@ public class TestEnumMap {
     public void enumMapTest2() {
         Phase.Transition transition = Phase.Transition.get(Phase.GAS, Phase.LIQUID);
         Assertions.assertEquals(Phase.Transition.CONDENSE, transition);
+
     }
 
     enum Phase {
@@ -51,8 +52,8 @@ public class TestEnumMap {
 
             private static final Map<Phase, Map<Phase, Transition>> m
                     = Stream.of(values()).collect(
-                    groupingBy(t -> t.from,
-                            () -> new EnumMap<>(Phase.class),
+                    groupingBy(t -> t.from, // 키
+                            () -> new EnumMap<>(Phase.class), // 반환값 타입
                             toMap(t -> t.to, t -> t, (x, y) -> y, () -> new EnumMap<>(Phase.class))
                     ));
 
