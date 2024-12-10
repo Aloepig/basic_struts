@@ -1,4 +1,4 @@
-package effective.ch7;
+package effective.ch8;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
