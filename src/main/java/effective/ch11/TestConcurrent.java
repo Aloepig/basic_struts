@@ -12,8 +12,10 @@ public class TestConcurrent {
     @Test
     @DisplayName("동시 실행 시간을 재는 프레임워크 예시")
     public void concurrentTest() throws InterruptedException {
-        Executor executor = Executors.newSingleThreadExecutor();
-        long l = time(executor, 1, () -> {
+        int threadCount = 2;
+        // Executor executor = Executors.newSingleThreadExecutor(); // 스레드가 1개이므로 concurrency 를 2로 하면 무한 대기됨
+        Executor executor = Executors.newFixedThreadPool(threadCount);
+        long l = time(executor, threadCount, () -> {
             System.out.println("run");
         });
 
