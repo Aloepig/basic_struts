@@ -14,12 +14,13 @@ public class TestConcurrent {
     public void concurrentTest() throws InterruptedException {
         int threadCount = 2;
         // Executor executor = Executors.newSingleThreadExecutor(); // 스레드가 1개이므로 concurrency 를 2로 하면 무한 대기됨
+        // 스레드 기아 교착상태 thread starvation deadlock 이라 함.
         Executor executor = Executors.newFixedThreadPool(threadCount);
-        long l = time(executor, threadCount, () -> {
+        long nanosecond = time(executor, threadCount, () -> {
             System.out.println("run");
         });
 
-        System.out.println(l);
+        System.out.println(nanosecond);
     }
 
     long time(Executor executor, int concurrency, Runnable action) throws InterruptedException {
@@ -29,23 +30,21 @@ public class TestConcurrent {
 
         for (int i = 0; i < concurrency; i++) {
             executor.execute(() -> {
-                // 준비 마침알림
-                ready.countDown();
+                ready.countDown(); // 스레드 준비 완료 표시
                 try {
-                    start.await();
-                    action.run();
+                    start.await(); // 시작 신호 대기
+                    action.run(); // 지정된 작업 실행
                 } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
+                    Thread.currentThread().interrupt(); // 스레드 인터럽트 처리
                 } finally {
-                    // 작업 마침을 알림
-                    done.countDown();
+                    done.countDown(); // 작업 완료 알림
                 }
             });
         }
-        ready.await();
+        ready.await(); // 1. ready latch 가 0이 되면 다음코드 실행
         long begin = System.nanoTime();
-        start.countDown();
-        done.await();
+        start.countDown(); // 2. 모든 스레드의 start.await() 블락 해제
+        done.await(); // 3. done latch 가 0이 되면 다음코드 실행.
         return System.nanoTime() - begin;
     }
 }
