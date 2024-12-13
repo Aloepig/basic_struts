@@ -23,6 +23,15 @@ public class TestConcurrent {
         System.out.println(nanosecond);
     }
 
+    /**
+     * Measures the time taken for a concurrent action to complete with a specified number of threads.
+     *
+     * @param executor the {@link Executor} used to manage threads that execute the action
+     * @param concurrency the number of threads to execute the action in parallel
+     * @param action the task to be executed by each thread
+     * @return the time taken in nanoseconds for all threads to complete the action
+     * @throws InterruptedException if the current thread is interrupted while waiting for threads to complete
+     */
     long time(Executor executor, int concurrency, Runnable action) throws InterruptedException {
         CountDownLatch ready = new CountDownLatch(concurrency);
         CountDownLatch start = new CountDownLatch(1);
