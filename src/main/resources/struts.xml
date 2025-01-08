@@ -13,6 +13,8 @@
     <include file="controller/ch4.xml" />
     <include file="controller/ch8.xml" />
 
+    <include file="rebuild/tester.xml"/>
+
     <package name="basicstruts" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
 
